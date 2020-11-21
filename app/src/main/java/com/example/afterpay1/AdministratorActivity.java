@@ -27,6 +27,12 @@ public class AdministratorActivity extends AppCompatActivity {
 
         dbHelper = new DBHelper(getApplicationContext());
 
+        findViewById(R.id.ashopRegistrationBtn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(AdministratorActivity.this,ShopActivity.class));
+            }
+        });
        findViewById(R.id.AuserRegistrationBtn).setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {

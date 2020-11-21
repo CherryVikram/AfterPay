@@ -12,6 +12,7 @@
         <activity android:name=".NewUserActivity"></activity>
         <activity android:name=".TempActivity" />
         <activity android:name=".AdministratorActivity" />
+        <activity android:name=".ShopActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
