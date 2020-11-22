@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="8dp"
+            >
+
+            <ImageView
+                android:id="@+id/nandini_img"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                card_view:layout_constraintBottom_toBottomOf="parent"
+                card_view:layout_constraintStart_toStartOf="parent"
+                card_view:layout_constraintTop_toTopOf="parent"
+                card_view:srcCompat="@drawable/avatar"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/nandini_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="Nandini Store"
+                android:textSize="24sp"
+                card_view:layout_constraintEnd_toEndOf="parent"
+                card_view:layout_constraintHorizontal_bias="0.048"
+                card_view:layout_constraintStart_toEndOf="@+id/nandini_img"
+                card_view:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/nandini_mob"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:text="Mobile"
+                card_view:layout_constraintStart_toEndOf="@+id/nandini_img"
+                card_view:layout_constraintTop_toBottomOf="@+id/nandini_name"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/nandini_addr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:text="Address"
+                card_view:layout_constraintStart_toEndOf="@+id/nandini_mob"
+                card_view:layout_constraintTop_toBottomOf="@+id/nandini_name"
+                tools:ignore="MissingConstraints" />
+        </android.support.constraint.ConstraintLayout>
+
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:padding="8dp"
+            android:layout_weight="1"
+            >
+
+            <ImageView
+                android:id="@+id/bakery_img"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                card_view:srcCompat="@drawable/avatar"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="8dp"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/bakery_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:text="Iyyegar Bakery"
+
+                android:textSize="24sp"
+                card_view:layout_constraintStart_toEndOf="@+id/bakery_img"
+                card_view:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/bakery_mob"
+                android:layout_width="43dp"
+                android:layout_height="15dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Mobile"
+                card_view:layout_constraintStart_toEndOf="@+id/bakery_img"
+                card_view:layout_constraintTop_toBottomOf="@+id/bakery_name"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/bakery_addr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Address"
+                card_view:layout_constraintStart_toEndOf="@+id/bakery_mob"
+                card_view:layout_constraintTop_toBottomOf="@+id/bakery_name"
+                tools:ignore="MissingConstraints" />
+        </android.support.constraint.ConstraintLayout>
+
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:padding="8dp"
+            android:layout_weight="1"
+            >
+
+            <ImageView
+                android:id="@+id/mudrika_img"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                card_view:srcCompat="@drawable/avatar"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="8dp"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/mudrika_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:text="Mudrika"
+
+                android:textSize="24sp"
+                card_view:layout_constraintStart_toEndOf="@+id/mudrika_img"
+                card_view:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/mudrika_mob"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Mobile"
+                card_view:layout_constraintStart_toEndOf="@+id/mudrika_addr"
+                card_view:layout_constraintTop_toBottomOf="@+id/mudrika_name"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/mudrika_addr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Address"
+                card_view:layout_constraintStart_toEndOf="@+id/mudrika_img"
+                card_view:layout_constraintTop_toBottomOf="@+id/mudrika_name"
+                tools:ignore="MissingConstraints" />
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:padding="8dp"
+            android:layout_weight="1"
+            >
+
+            <ImageView
+                android:id="@+id/co_op_img"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                card_view:srcCompat="@drawable/avatar"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="8dp"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/co_op_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:text="Co Operative Society"
+
+                android:textSize="24sp"
+                card_view:layout_constraintStart_toEndOf="@+id/co_op_img"
+                card_view:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/co_op_mob"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Mobile"
+                card_view:layout_constraintStart_toEndOf="@+id/co_op_img"
+                card_view:layout_constraintTop_toBottomOf="@+id/co_op_name"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/co_op_addr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Address"
+                card_view:layout_constraintStart_toEndOf="@+id/co_op_mob"
+                card_view:layout_constraintTop_toBottomOf="@+id/co_op_name"
+                tools:ignore="MissingConstraints" />
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:padding="8dp"
+            android:layout_weight="1"
+            >
+
+            <ImageView
+                android:id="@+id/co_op_2_img"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                card_view:srcCompat="@drawable/avatar"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="8dp"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/co_op_2_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+
+                android:text="Co Operative Society 2"
+                android:textSize="24sp"
+                card_view:layout_constraintStart_toEndOf="@+id/co_op_2_img"
+                card_view:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/co_op_2_mob"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Mobile"
+                card_view:layout_constraintStart_toEndOf="@+id/co_op_2_img"
+                card_view:layout_constraintTop_toBottomOf="@+id/co_op_2_name"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/co_op_2_addr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Address"
+                card_view:layout_constraintStart_toEndOf="@+id/co_op_2_mob"
+                card_view:layout_constraintTop_toBottomOf="@+id/co_op_2_name"
+                tools:ignore="MissingConstraints" />
+        </android.support.constraint.ConstraintLayout>
+
+
+
+</LinearLayout>
