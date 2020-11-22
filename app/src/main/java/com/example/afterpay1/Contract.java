@@ -12,4 +12,14 @@ public final class Contract {
         static final String EMAIL="EMAIL";
         static final String ADDRESS="ADDRESS";
     }
+    class ShopTable implements BaseColumns {
+        static final String TABLE_NAME="SHOP";
+        static final String SHOP_NAME="NAME";
+        static final String SHOP_ID="SHOP_ID";
+        static final String MOBILE="MOBILE";
+        static final String EMAIL="EMAIL";
+        static final String ADDRESS="ADDRESS";
+
+    }
 }
+
