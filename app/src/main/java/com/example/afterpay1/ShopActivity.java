@@ -1,5 +1,6 @@
 package com.example.afterpay1;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -38,17 +39,17 @@ public class ShopActivity  extends AppCompatActivity {
         findViewById(R.id.AShopShowBtn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                db=dbHelper.getReadableDatabase();
-                Cursor cursor=dbHelper.showshop(db);
-                String id,name,address,result="";
-                while(cursor.moveToNext())
-                {
-                    id=cursor.getString(cursor.getColumnIndex(Contract.ShopTable.SHOP_ID));
-                    name=cursor.getString(cursor.getColumnIndex(Contract.ShopTable.SHOP_NAME));
-                    address=cursor.getString(cursor.getColumnIndex(Contract.ShopTable.ADDRESS));
-                    result="\n\n"+id+"\n\n"+name+"\n\n"+address;
-                }
-                Toast.makeText(ShopActivity.this,result,Toast.LENGTH_SHORT).show();
+//                db=dbHelper.getReadableDatabase();
+//                Cursor cursor=dbHelper.showshop(db);
+//                String id,name,address,result="";
+//                while(cursor.moveToNext())
+//                {
+//                    id=cursor.getString(cursor.getColumnIndex(Contract.ShopTable.SHOP_ID));
+//                    name=cursor.getString(cursor.getColumnIndex(Contract.ShopTable.SHOP_NAME));
+//                    address=cursor.getString(cursor.getColumnIndex(Contract.ShopTable.ADDRESS));
+//                    result="\n\n"+id+"\n\n"+name+"\n\n"+address;
+//                }
+                //startActivity(new Intent(ShopActivity.this,ShowShopDetails.class));
             }
         });
     }
