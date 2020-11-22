@@ -14,6 +14,7 @@ public class ShopActivity  extends AppCompatActivity {
     EditText shopname,shopid,shopmobile,shopemail,shopaddress;
     DBHelper dbHelper;
     SQLiteDatabase db;
+    String result="";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,21 +37,29 @@ public class ShopActivity  extends AppCompatActivity {
                  Toast.makeText(ShopActivity.this,"ERROR ",Toast.LENGTH_SHORT).show();
             }
         });
+
         findViewById(R.id.AShopShowBtn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                db=dbHelper.getReadableDatabase();
-//                Cursor cursor=dbHelper.showshop(db);
-//                String id,name,address,result="";
-//                while(cursor.moveToNext())
-//                {
-//                    id=cursor.getString(cursor.getColumnIndex(Contract.ShopTable.SHOP_ID));
-//                    name=cursor.getString(cursor.getColumnIndex(Contract.ShopTable.SHOP_NAME));
-//                    address=cursor.getString(cursor.getColumnIndex(Contract.ShopTable.ADDRESS));
-//                    result="\n\n"+id+"\n\n"+name+"\n\n"+address;
-//                }
-                //startActivity(new Intent(ShopActivity.this,ShowShopDetails.class));
+                db=dbHelper.getReadableDatabase();
+                Cursor cursor=dbHelper.showshop(db);
+                String id,name,address;
+                while(cursor.moveToNext())
+                {
+                    id=cursor.getString(cursor.getColumnIndex(Contract.ShopTable.SHOP_ID));
+                    name=cursor.getString(cursor.getColumnIndex(Contract.ShopTable.SHOP_NAME));
+                    address=cursor.getString(cursor.getColumnIndex(Contract.ShopTable.ADDRESS));
+                    result+="\n\n"+id+"\n\n"+name+"\n\n"+address;
+                }
+                showMessage(result);
             }
         });
+    }
+
+    private void showMessage(String result) {
+        Intent intent = new Intent(this,ShowShopDetails.class);
+        intent.putExtra("SHOP_DETAILS",result);
+        startActivity(intent);
+
     }
 }
