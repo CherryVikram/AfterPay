@@ -25,6 +25,12 @@ public class MainActivity extends AppCompatActivity {
                         (userId.getText().toString().equals("184CA059") && userPassword.getText().toString().equals("HelloAdmin")))
                 {
                     startActivity(new Intent(MainActivity.this,AdministratorActivity.class));
+                }else if((userId.getText().toString().equals("184CA027") && userPassword.getText().toString().equals("Sthapak")))
+                {
+                    // Fetch Details From DB Student and verify and Login
+                    //Call this Activty
+
+                   startActivity(new Intent(MainActivity.this,StudentDetailsActivity.class));
                 }
                 else
                 {
