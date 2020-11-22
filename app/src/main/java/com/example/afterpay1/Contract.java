@@ -21,5 +21,13 @@ public final class Contract {
         static final String ADDRESS="ADDRESS";
 
     }
+    class TransactionTable implements  BaseColumns{
+        //static final String TRANSACTION_ID="TRANSACTION_ID";
+        static final String TABLE_NAME="TABLE_NAME";
+        static final String STUDNET_ID="STUDNET_ID";
+        static final String SHOP_ID="SHOP_ID";
+        static final String AMOUNT="AMOUNT";
+        static final String DATE="DATE";
+    }
 }
 

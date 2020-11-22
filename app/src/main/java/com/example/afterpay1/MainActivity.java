@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     EditText userId,userPassword;
-
+    public static String std_id="184CA027";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

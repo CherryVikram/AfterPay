@@ -22,4 +22,9 @@
         android:name="com.example.afterpay1.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/nav_aboutUs"
+        android:name="com.example.afterpay1.ui.about.aboutUs"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/activity_about" />
 </navigation>

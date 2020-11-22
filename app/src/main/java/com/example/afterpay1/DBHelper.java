@@ -8,10 +8,11 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DBHelper extends SQLiteOpenHelper {
 
-    private static  final String DATABASE_NAME="AFTERPAYDB";
-    private static  final int DATABASE_VERSION=1;
+    private static  final String DATABASE_NAME="AFTERPAYDBS";
+    private static  final int DATABASE_VERSION=2;
      static Contract.StudentTable  stobj;
      static Contract.ShopTable     shobj;
+     static Contract.TransactionTable trsobj;
     static final  String CREATE_TABLE="create table "+stobj.TABLE_NAME+"("+stobj.COLLEGE_ID+" varchar(12) primary key,"+stobj.NAME+" varchar(30),"+
             stobj.MOBILE+" varchar(12),"+stobj.EMAIL+" varchar(40),"+stobj.ADDRESS+" varchar(155));";
     static final  String CREATE_SHOPTABLE="create table "+shobj.TABLE_NAME+"("+shobj.SHOP_ID+" varchar(12) primary key,"+shobj.SHOP_NAME+" varchar(30),"+
@@ -21,13 +22,38 @@ public class DBHelper extends SQLiteOpenHelper {
         super(context,DATABASE_NAME,null,DATABASE_VERSION);
     }
 
+    //"+trsobj.TRANSACTION_ID+" varchar(10) primary key,"
+
+    static final String CREATE_TRANSACTION = "create table "+trsobj.TABLE_NAME+" ("+trsobj.SHOP_ID+" varchar(12),"+trsobj.STUDNET_ID+" varchar(12)," +
+            trsobj.AMOUNT+" varchar(10),"+trsobj.DATE+" varchar(50));";
+
+
+
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(CREATE_TABLE);
         db.execSQL(CREATE_SHOPTABLE);
-
+        db.execSQL(CREATE_TRANSACTION);
     }
 
+    public  long addTransaction(String shop_id,String amt,String std_id,String date,SQLiteDatabase db){
+        ContentValues contentValues = new ContentValues();
+        //contentValues.put(trsobj.TRANSACTION_ID,trsId);
+        contentValues.put(trsobj.AMOUNT,amt);
+        contentValues.put(trsobj.SHOP_ID,shop_id);
+        contentValues.put(trsobj.STUDNET_ID,std_id);
+        contentValues.put(trsobj.DATE,date);
+        long c=db.insert(trsobj.TABLE_NAME,null,contentValues);
+        db.close();
+        return c;
+    }
+    public  Cursor showTransactions(String std_id,SQLiteDatabase db){
+        String selection = trsobj.STUDNET_ID+" LIKE ? ";
+        String[] projections = {trsobj.STUDNET_ID,trsobj.DATE,trsobj.AMOUNT,trsobj.SHOP_ID};
+        String selections_args[] = {std_id};
+        Cursor c = db.query(trsobj.TABLE_NAME,projections,selection,selections_args,null,null,null);
+        return c;
+    }
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
