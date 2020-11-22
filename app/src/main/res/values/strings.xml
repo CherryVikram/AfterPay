@@ -13,5 +13,5 @@
 
     <string name="menu_home">Details</string>
     <string name="menu_gallery">Transactions</string>
-    <string name="menu_slideshow">Credit Balance</string>
+    <string name="menu_slideshow">Show Shops</string>
 </resources>

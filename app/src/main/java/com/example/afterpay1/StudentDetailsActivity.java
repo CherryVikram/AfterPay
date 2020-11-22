@@ -15,6 +15,8 @@ import androidx.navigation.ui.NavigationUI;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 public class StudentDetailsActivity extends AppCompatActivity {
 
@@ -36,6 +38,7 @@ public class StudentDetailsActivity extends AppCompatActivity {
         });
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
+
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(

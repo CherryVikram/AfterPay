@@ -1,5 +1,6 @@
 package com.example.afterpay1.ui.slideshow;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +12,7 @@ import android.support.v4.app.Fragment;
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProvider;
 
+import com.example.afterpay1.PaymentActivity;
 import com.example.afterpay1.R;
 
 public class SlideshowFragment extends Fragment {
@@ -22,11 +24,13 @@ public class SlideshowFragment extends Fragment {
         slideshowViewModel =
                 new ViewModelProvider(this, new ViewModelProvider.NewInstanceFactory()).get(SlideshowViewModel.class);
         View root = inflater.inflate(R.layout.fragment_slideshow, container, false);
-        final TextView textView = root.findViewById(R.id.text_slideshow);
-        slideshowViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        // Shop details
+        root.findViewById(R.id.nandini_img).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(),PaymentActivity.class);
+                intent.putExtra("SHOP_ID",1);
+                startActivity(intent);
             }
         });
         return root;
